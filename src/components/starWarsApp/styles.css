@@ -1,0 +1,28 @@
+.content {
+    background-image: url('../../img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tab {
+    background-color: black;
+    height: 50px;
+}
+
+.tablinks {
+    margin-top: 4px;
+    margin-left:35px;
+    border: 0;
+    background-color: black;
+    font-size: 20px;
+    font-family: stjedice;
+    color: white;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "stjedice"; 
+    src: url("../../fonts/stjedise/STJEDISE.TTF") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 

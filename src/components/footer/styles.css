@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    background-color: black;
+    height: 70px;
+}
+
+.github {
+    font-family: stjedice;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5%;
+    margin-top: 6px;
+}
+
+@font-face {
+    font-family: "stjedice"; 
+    src: url("../../fonts/stjedise/STJEDISE.TTF") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}

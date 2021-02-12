@@ -1,0 +1,15 @@
+.header {
+    height: 120px;
+    background-color: black;
+}
+
+.logo {
+    height: 120px;
+    margin-left: 1%;
+}
+
+.jedi {
+    height: 120px;
+    float: right;
+    margin-right: 1%;
+}
