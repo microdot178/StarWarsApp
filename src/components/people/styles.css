@@ -1,0 +1,13 @@
+.text {
+    color: white;
+    font-family: stjedice;
+    font-size: 50px;
+    margin-top: 100px;
+}
+
+@font-face {
+    font-family: "stjedice"; 
+    src: url("../../fonts/stjedise/STJEDISE.TTF") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 

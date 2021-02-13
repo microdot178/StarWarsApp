@@ -3,6 +3,8 @@ import './styles.css'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import Planets from '../planets/Planets'
+import StarShips from '../starShips/StarShips'
+import People from '../people/People'
 
 const StarWarsApp = () => {
 
@@ -18,11 +20,15 @@ const StarWarsApp = () => {
                 );
             case 1:
                 return (
-                    <div className='content'> case 1 </div>
+                    <div className='content'>
+                        <People />
+                    </div>
                 );
             case 2:
                 return (
-                    <div className='content'> case 2 </div>
+                    <div className='content'>
+                        <StarShips />
+                    </div>
                 );
             default:
                 break;

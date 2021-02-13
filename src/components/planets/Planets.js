@@ -21,13 +21,12 @@ const Planets = () => {
             {planets.map((item, id) => {
                 return (
                     <div className='item'> 
-                        <img src='' className='image' />
+                        <img src={`https://starwars-visualguide.com/assets/img/planets/${id+1}.jpg`} className='image' />
                         <div className='planet_name'> {item.name} </div>
                     </div>
                 )
             })}
         </div>
-    
     )
 }
 
