@@ -1,6 +1,14 @@
 import React from 'react'
 import './styles.css'
 import { fetchPlanets } from "../../services/swapi";
+import no_image from '../../img/no_image.jpg'
+
+const getImage = (id) => {
+    let url = `https://starwars-visualguide.com/assets/img/planets/${id+1}.jpg`
+    return (
+        url
+    )
+}
 
 const Planets = () => {
 
@@ -14,14 +22,15 @@ const Planets = () => {
         handleFetchPlanets();
     }, []);
     
-    console.log(planets)
-
     return (
         <div className='content'>
             {planets.map((item, id) => {
                 return (
                     <div className='item'> 
-                        <img src={`https://starwars-visualguide.com/assets/img/planets/${id+1}.jpg`} className='image' />
+                        <img 
+                        onError={(e)=>{e.target.onerror = null; e.target.src=no_image}} 
+                        src={getImage(id)} className='image' 
+                        />
                         <div className='planet_name'> {item.name} </div>
                     </div>
                 )
