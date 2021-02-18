@@ -4,7 +4,7 @@ import { fetchStarship, fetchStarShips } from '../../services/swapi'
 import no_image from '../../assets/img/no_image.jpg'
 import Overlay from '../common/overlay'
 import Modal from '../common/modal'
-import ListItem from '../listItem/StarshipItem'
+import StarshipItem from '../starshipItem'
 
 const StarShips = () => {
 
@@ -42,7 +42,7 @@ const StarShips = () => {
             { !!itemId && 
                 <Overlay setItemId={setItemId}>
                     <Modal>
-                        <ListItem 
+                        <StarshipItem 
                             id={itemId} 
                             fetch={(id) => fetchStarship(id)} 
                             setItemId={setItemId} 
