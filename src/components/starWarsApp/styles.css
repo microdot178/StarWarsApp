@@ -1,5 +1,5 @@
 .content {
-    background-image: url('../../img/background.jpg');
+    background-image: url('../../assets/img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: "stjedice"; 
-    src: url("../../fonts/stjedise/STJEDISE.TTF") format("truetype"); 
+    src: url("../../assets/fonts/stjedise/STJEDISE.TTF") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 

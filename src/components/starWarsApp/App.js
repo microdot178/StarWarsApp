@@ -1,11 +1,11 @@
 import React from 'react'
 import './styles.css'
-import Header from '../header/Header'
-import Footer from '../footer/Footer'
-import Planets from '../planets/Planets'
-import StarShips from '../starShips/StarShips'
-import People from '../people/People'
-
+import Header from '../header'
+import Footer from '../footer'
+import Planets from '../planets'
+import StarShips from '../starShips'
+import People from '../people'
+ 
 const StarWarsApp = () => {
 
     const [tab, setTab] = React.useState(0);
@@ -64,6 +64,8 @@ const StarWarsApp = () => {
     
             {renderTabs(tab)}
             <Footer />
+
+            
         </div>
     );
 }

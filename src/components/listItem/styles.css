@@ -1,0 +1,21 @@
+.item_modal {
+    display: flex;
+}
+
+.about {
+    float: right;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width: 250px;
+}
+
+.image_modal {
+    width: 400px;
+    height: 400px;
+}
+
+.close {
+    float: right;
+}
