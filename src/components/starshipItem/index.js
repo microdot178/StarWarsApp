@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles.css'
 import no_image from '../../assets/img/no_image.jpg'
+import Loader from '../loader'
 
 const StarshipItem = ({ id = 1, fetch, setItemId }) => {
 
@@ -13,7 +14,7 @@ const StarshipItem = ({ id = 1, fetch, setItemId }) => {
             })
     }, [])
 
-    return !data ? <h2>LOADING...</h2> : (
+    return !data ? <Loader /> : (
         <div>
             <span className='close' onClick={() => setItemId(null)}><i class="fas fa-times"></i></span>
             <div className='item_modal'>
