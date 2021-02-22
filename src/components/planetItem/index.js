@@ -23,7 +23,6 @@ const PlanetItem = ({ id = 1, fetch, setItemId }) => {
                     onError={(e) => { e.target.onerror = null; e.target.src = no_image }}
                     className='image_modal' 
                 />
-                { console.log(data) }
                 <div className='about'>
                     <span><strong>name:</strong> {data.name} </span>
                     <span><strong>climate:</strong> {data.climate}</span>

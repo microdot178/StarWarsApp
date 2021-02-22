@@ -1,9 +1,9 @@
 import axios from 'axios'
 
-export const fetchPlanets = async () => {
+export const fetchPlanets = async (page = 1) => {
     return axios.get('https://swapi.dev/api/planets/',{
         params: {
-            page: 2
+            page: page
         }
     })
 }
@@ -13,10 +13,10 @@ export const fetchPlanet = async (id) => {
 }
 
 
-export const fetchStarShips = async () => {
+export const fetchStarShips = async (page) => {
     return axios.get(`https://swapi.dev/api/starships/`,{
         params: {
-            page: 1
+            page: page
         }
     })
 }
