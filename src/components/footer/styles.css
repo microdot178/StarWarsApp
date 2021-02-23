@@ -1,5 +1,4 @@
 .footer {
-    display: flex;
     background-color: black;
     height: 70px;
 }
@@ -10,7 +9,18 @@
     color: white;
     text-decoration: none;
     margin-left: 1.5%;
-    margin-top: 6px;
+    margin-top: 10px;
+}
+
+.swapi {
+    font-family: stjedice;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    margin-top: 7px;
+    float: right;
+    margin-right: 2%;
+
 }
 
 @font-face {

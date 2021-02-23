@@ -13,7 +13,7 @@ export const fetchPlanet = async (id) => {
 }
 
 
-export const fetchStarShips = async (page) => {
+export const fetchStarShips = async (page = 1) => {
     return axios.get(`https://swapi.dev/api/starships/`,{
         params: {
             page: page

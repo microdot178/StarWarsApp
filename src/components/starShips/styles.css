@@ -1,4 +1,4 @@
-.content {
+.starships {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,4 +21,16 @@
 .starship_name {
     display: flex;
     justify-content: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination {
+    padding: 3px;
+    background-color:white;
+    border-radius: 30px;
 }

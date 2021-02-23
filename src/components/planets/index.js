@@ -7,7 +7,6 @@ import Modal from '../common/modal'
 import PlanetItem from '../planetItem'
 import { Pagination } from '@material-ui/lab'
 
-
 const Planets = () => {
 
     const [planets, setPlanets] = React.useState([])
@@ -19,7 +18,6 @@ const Planets = () => {
     const handleFetchPlanets = (page) => {
         fetchPlanets(page).then((res) => {
             setCount(res.data.count)
-            console.log(res.data.count)
             setPlanets(res.data.results)
         });
     };
@@ -28,18 +26,18 @@ const Planets = () => {
         handleFetchPlanets();
     }, []);
 
-    // React.useEffect(() => {
-    //     handleFetchPlanets(page);
-    // }, [page]);
+     React.useEffect(() => {
+         handleFetchPlanets(page);
+         console.log(page)
+    }, [page]);
 
     return (
         <>
-            <div className='content'>
+            <div className='planets'>
                 {planets.map((item) => {
                     const elementId = item.url.match(/[0-9]{1,2}/)[0]
                     return (
                         <div className='item' onClick={() => setItemId(elementId)}>
-                            {/* <Modal /> */}
                             <img
                                 onError={(e) => { e.target.onerror = null; e.target.src = no_image }}
                                 src={`https://starwars-visualguide.com/assets/img/planets/${elementId}.jpg`} 
@@ -50,8 +48,14 @@ const Planets = () => {
                     )
                 })}
             </div>
-            {/* <Pagination handleFetchItems={handleFetchPlanets} /> */}
-            <Pagination count={count / 10} page={page} onChange={(value) => {handleFetchPlanets(value)}} />
+            <div className='nav'>
+                <Pagination 
+                    count={count / 10} 
+                    page={page} 
+                    onChange={(e, value) => {setPage(value)}}
+                    className='pagination'
+                />
+            </div>
             { !!itemId && 
                 <Overlay setItemId={setItemId}>
                     <Modal>

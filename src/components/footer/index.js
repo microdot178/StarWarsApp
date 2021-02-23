@@ -9,6 +9,11 @@ const Footer = () => {
                 className='github'>
                 <i class="fab fa-github" aria-hidden="true"></i>GitHub
             </a>
+            <a
+                href='https://swapi.dev/'
+                className='swapi'>
+                swapi.dev
+            </a>
         </div>
     )
 }
