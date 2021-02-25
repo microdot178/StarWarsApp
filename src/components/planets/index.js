@@ -4,10 +4,25 @@ import { fetchPlanet, fetchPlanets } from "../../services/swapi"
 import no_image from '../../assets/img/no_image.jpg'
 import Overlay from '../common/overlay'
 import Modal from '../common/modal'
-import PlanetItem from '../planetItem'
+import PlanetItem from '../itemList/Planets.js'
 import { Pagination } from '@material-ui/lab'
+import { makeStyles } from '@material-ui/core'
+
+// вкладка planets
+
+const useStyles = makeStyles((theme) => ({
+    pagination: {
+        '& .MuiPaginationItem-page' : {
+            color: 'white',
+            fontSize: '120%',
+        }
+    },
+}));
 
 const Planets = () => {
+    
+
+    const classes = useStyles()
 
     const [planets, setPlanets] = React.useState([])
     const [itemId, setItemId] = React.useState(null)
@@ -28,12 +43,12 @@ const Planets = () => {
 
      React.useEffect(() => {
          handleFetchPlanets(page);
-         console.log(page)
     }, [page]);
 
     return (
         <>
-            <div className='planets'>
+            <div className='items'>
+                {/* рисую циклом все объекты, полученые в json */}
                 {planets.map((item) => {
                     const elementId = item.url.match(/[0-9]{1,2}/)[0]
                     return (
@@ -43,7 +58,7 @@ const Planets = () => {
                                 src={`https://starwars-visualguide.com/assets/img/planets/${elementId}.jpg`} 
                                 className='image'
                             />
-                            <div className='planet_name'> {item.name} </div>
+                            <div className='item_name'> {item.name} </div>
                         </div>
                     )
                 })}
@@ -53,7 +68,8 @@ const Planets = () => {
                     count={count / 10} 
                     page={page} 
                     onChange={(e, value) => {setPage(value)}}
-                    className='pagination'
+                    shape="rounded"
+                    className={classes.pagination}
                 />
             </div>
             { !!itemId && 

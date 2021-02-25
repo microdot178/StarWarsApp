@@ -1,7 +1,7 @@
 import React from 'react'
-import '../starshipItem/styles.css'
+import './styles.css'
 import no_image from '../../assets/img/no_image.jpg'
-import Loader from '../loader'
+import Loader from '../common/loader'
 
 const PlanetItem = ({ id = 1, fetch, setItemId }) => {
 

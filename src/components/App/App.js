@@ -4,13 +4,16 @@ import Header from '../header'
 import Footer from '../footer'
 import Planets from '../planets'
 import StarShips from '../starShips'
-import People from '../people'
+import Characters from '../characters'
  
 const StarWarsApp = () => {
 
     const [tab, setTab] = React.useState(0);
+    
+    //вкладки planets, characters, starships
+    //конструкция switch
 
-    const renderTabs = (id) => {
+    const renderTabs = (id) => { 
         switch (id) {
             case 0:
                 return (
@@ -21,7 +24,7 @@ const StarWarsApp = () => {
             case 1:
                 return (
                     <div className='content'>
-                        <People />
+                        <Characters />
                     </div>
                 );
             case 2:
@@ -51,7 +54,7 @@ const StarWarsApp = () => {
                 onClick={() => setTab(1)}
                 style = {{ border: tab === 1 ? "1px solid blue" : "" }}
                 >
-                    people
+                    characters
                 </button>
                 <button
                 className="tablinks"

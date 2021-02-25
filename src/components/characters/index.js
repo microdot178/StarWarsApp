@@ -1,59 +1,58 @@
-import React from 'react'
+import React from 'react';
 import '../planets/styles.css'
-import { fetchStarship, fetchStarShips } from '../../services/swapi'
+import { fetchCharacters, fetchCharacter } from '../../services/swapi'
 import no_image from '../../assets/img/no_image.jpg'
 import Overlay from '../common/overlay'
 import Modal from '../common/modal'
-import StarshipItem from '../itemList/Starships'
+import CharacterItem from '../itemList/Characters.js'
 import { Pagination } from '@material-ui/lab'
 
-// вкладка starships
+// вкладка characters
 
-const StarShips = () => {
+const Characters = () => {
 
-    const [starShips, setStarShips] = React.useState([]);
+    const [characters, setCharacters] = React.useState([])
     const [itemId, setItemId] = React.useState(null)
     const [page, setPage] = React.useState(1)
     const [count, setCount] = React.useState(0)
 
-    const handleFetchStarShips = (page) => {
-        fetchStarShips(page).then((res) => {
+    const handleFetchCaracters = (page) => {
+        fetchCharacters(page).then((res) => {
             setCount(res.data.count)
-            setStarShips(res.data.results)
+            setCharacters(res.data.results)
         });
     };
 
     React.useEffect(() => {
-        handleFetchStarShips();
+        handleFetchCaracters();
     }, []);
 
     React.useEffect(() => {
-        handleFetchStarShips(page);
+        handleFetchCaracters(page);
     }, [page]);
 
     return (
         <>
-            <div className='items'>  
+            <div className='items'>
                 {/* рисую циклом все объекты, полученые в json */}
-                {starShips.map((item) => {
+                {characters.map((item) => {
                     const elementId = item.url.match(/[0-9]{1,2}/)[0]
                     return (
                         <div className='item' onClick={() => setItemId(elementId)}>
                             <img
                                 onError={(e) => { e.target.onerror = null; e.target.src = no_image }}
-                                src={`https://starwars-visualguide.com/assets/img/starships/${elementId}.jpg`} 
+                                src={`https://starwars-visualguide.com/assets/img/people/${elementId}.jpg`} 
                                 className='image'
                             />
                             <div className='item_name'> {item.name} </div>
                         </div>
                     )
                 })}
-
             </div>
             <div className='nav'>
                 <Pagination 
-                    count={4}
-                    page={page}
+                    count={9} 
+                    page={page} 
                     onChange={(e, value) => {setPage(value)}}
                     className='pagination'
                 />
@@ -61,17 +60,15 @@ const StarShips = () => {
             { !!itemId && 
                 <Overlay setItemId={setItemId}>
                     <Modal>
-                        <StarshipItem 
+                        <CharacterItem 
                             id={itemId} 
-                            fetch={(id) => fetchStarship(id)} 
+                            fetch={(id) => fetchCharacter(id)} 
                             setItemId={setItemId} 
-                        
                         />
                     </Modal>
                 </Overlay> }
         </>
     )
-
 }
 
-export default StarShips;
+export default Characters;

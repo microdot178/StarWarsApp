@@ -15,6 +15,7 @@
 .image_modal {
     width: 400px;
     height: 400px;
+    object-fit: cover;
 }
 
 .close {
@@ -22,3 +23,10 @@
     color: white;
     cursor: pointer;
 }
+
+@font-face {
+    font-family: "stjedice"; 
+    src: url("../../assets/fonts/stjedise/STJEDISE.TTF") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
