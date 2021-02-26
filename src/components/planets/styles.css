@@ -34,11 +34,6 @@
     width: 100%;
 }
 
-.pagination {
-    background-color: white;
-    color: red;
-}
-
 @font-face {
     font-family: "stjedice"; 
     src: url("../../assets/fonts/stjedise/STJEDISE.TTF") format("truetype"); 

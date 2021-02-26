@@ -6,10 +6,27 @@ import Overlay from '../common/overlay'
 import Modal from '../common/modal'
 import StarshipItem from '../itemList/Starships'
 import { Pagination } from '@material-ui/lab'
+import { makeStyles } from '@material-ui/core'
+
+const useStyles = makeStyles((theme) => ({
+    pagination: {
+        '& .MuiPaginationItem-page' : {
+            color: 'white',
+            padding: '20px',
+            marginTop: '20px',
+        },
+        '& .MuiPaginationItem-page.Mui-selected' : {
+            color: 'blue',
+        } 
+    },
+}));
+
 
 // вкладка starships
 
 const StarShips = () => {
+
+    const classes = useStyles()
 
     const [starShips, setStarShips] = React.useState([]);
     const [itemId, setItemId] = React.useState(null)
@@ -55,7 +72,8 @@ const StarShips = () => {
                     count={4}
                     page={page}
                     onChange={(e, value) => {setPage(value)}}
-                    className='pagination'
+                    shape="rounded"
+                    className={classes.pagination}
                 />
             </div>
             { !!itemId && 

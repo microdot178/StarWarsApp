@@ -14,8 +14,12 @@ const useStyles = makeStyles((theme) => ({
     pagination: {
         '& .MuiPaginationItem-page' : {
             color: 'white',
-            fontSize: '120%',
-        }
+            padding: '20px',
+            marginTop: '20px',
+        },
+        '& .MuiPaginationItem-page.Mui-selected' : {
+            color: 'blue',
+        } 
     },
 }));
 
