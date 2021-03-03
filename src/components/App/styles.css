@@ -19,6 +19,7 @@
     font-family: stjedice;
     color: white;
     cursor: pointer;
+    text-decoration: none;
 }
 
 @font-face {

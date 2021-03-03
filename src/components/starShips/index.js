@@ -14,10 +14,14 @@ const useStyles = makeStyles((theme) => ({
             color: 'white',
             padding: '20px',
             marginTop: '20px',
+            fontSize: '110%',
         },
         '& .MuiPaginationItem-page.Mui-selected' : {
             color: 'blue',
-        } 
+        },
+        '& .MuiTouchRipple-root' : {
+            color: 'black',
+        }
     },
 }));
 

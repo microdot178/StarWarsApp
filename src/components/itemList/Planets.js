@@ -29,7 +29,7 @@ const PlanetItem = ({ id = 1, fetch, setItemId }) => {
                     <span><strong>diameter:</strong> {data.diameter}</span>
                     <span><strong>gravity:</strong> {data.gravity}</span>
                     <span><strong>terrain:</strong> {data.terrain}</span>
-                    <span><strong>surface_water:</strong> {data.surface_water}</span>
+                    <span><strong>surface water:</strong> {data.surface_water}</span>
                     <span><strong>population:</strong> {data.population}</span>
                 </div>
             </div>

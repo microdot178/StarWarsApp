@@ -4,7 +4,7 @@ import './styles.css'
 const Modal = ({ children }) => {
     return (
         <div className='modal'>
-            {children}
+                {children}
         </div>
     )
 }

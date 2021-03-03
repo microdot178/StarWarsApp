@@ -43,23 +43,23 @@ const StarWarsApp = () => {
             <Header />
             <div className="tab">
                 <button
-                className="tablinks"
-                onClick={() => setTab(0)}
-                style = {{ color: tab === 0 ? "blue" : "" }}
+                    className="tablinks"
+                    onClick={() => setTab(0)}
+                    style = {{ color: tab === 0 ? "blue" : "" }}
                 >
                     planets
                 </button>
                 <button
-                className="tablinks"
-                onClick={() => setTab(1)}
-                style = {{ color: tab === 1 ? "blue" : "" }}
+                    className="tablinks"
+                    onClick={() => setTab(1)}
+                    style = {{ color: tab === 1 ? "blue" : "" }}
                 >
                     characters
                 </button>
                 <button
-                className="tablinks"
-                onClick={() => setTab(2)}
-                style = {{ color: tab === 2 ? "blue" : "" }}
+                    className="tablinks"
+                    onClick={() => setTab(2)}
+                    style = {{ color: tab === 2 ? "blue" : "" }}
                 >
                     starships
                 </button>
