@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div className='header'>
             <a 
-                href="http://localhost:6308/planets" >
+                href="http://localhost:6308" >
                 <img src={logo} className='logo' />
             </a>
             <img src={jedi} className='jedi' />
